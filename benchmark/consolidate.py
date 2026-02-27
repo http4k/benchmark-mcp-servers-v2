@@ -60,8 +60,8 @@ def consolidate(results_dir):
             },
             'api_service': {
                 'language': 'Go (stdlib only)',
-                'cpus': '1.0',
-                'memory': '1G',
+                'cpus': '2.0',
+                'memory': '2G',
                 'catalog': '100k in-memory products',
                 'endpoints': ['/products/search', '/products/{id}', '/cart/calculate'],
             },

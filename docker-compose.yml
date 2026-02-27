@@ -28,10 +28,10 @@ services:
     deploy:
       resources:
         limits:
-          # Doubled CPU (0.5 → 1.0) and 4× memory (256M → 1G) to avoid api-service
-          # becoming the bottleneck now that MCP servers have better connection pools.
-          cpus: "1.0"
-          memory: 1G
+          # Doubled CPU (1.0 → 2.0) and 2× memory (1G → 2G) to avoid api-service
+          # becoming the bottleneck under high concurrency on larger VMs (8+ CPU).
+          cpus: "2.0"
+          memory: 2G
     healthcheck:
       test: [ "CMD", "wget", "--no-verbose", "--tries=1", "--spider", "http://localhost:8100/health" ]
       interval: 10s
