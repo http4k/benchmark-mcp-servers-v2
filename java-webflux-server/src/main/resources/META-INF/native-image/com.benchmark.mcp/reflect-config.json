@@ -1,0 +1,11 @@
+[
+  {
+    "name": "java.lang.Throwable",
+    "methods": [
+      {"name": "getCause", "parameterTypes": []},
+      {"name": "initCause", "parameterTypes": ["java.lang.Throwable"]},
+      {"name": "getMessage", "parameterTypes": []},
+      {"name": "getStackTrace", "parameterTypes": []}
+    ]
+  }
+]

@@ -1,0 +1,15 @@
+[
+  {
+    "httpRequest": {
+      "method": "GET",
+      "path": "/api"
+    },
+    "httpResponse": {
+      "statusCode": 200,
+      "headers": {
+        "Content-Type": ["application/json"]
+      },
+      "body": "{\"status\": \"ok\", \"message\": \"mock response\"}"
+    }
+  }
+]

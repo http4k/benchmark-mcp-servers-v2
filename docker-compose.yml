@@ -1,0 +1,416 @@
+services:
+  # ─── Infrastructure ──────────────────────────────────────────────────────────
+
+  mcp-redis:
+    image: redis:7-alpine
+    container_name: mcp-redis
+    command: redis-server --save "" --appendonly no
+    ports:
+      - "6379:6379"
+    deploy:
+      resources:
+        limits:
+          cpus: "0.5"
+          memory: 512M
+    healthcheck:
+      test: [ "CMD", "redis-cli", "ping" ]
+      interval: 5s
+      timeout: 3s
+      retries: 5
+    networks:
+      - mcp-network
+
+  mcp-api-service:
+    build: ./api-service
+    container_name: mcp-api-service
+    ports:
+      - "8100:8100"
+    deploy:
+      resources:
+        limits:
+          # Doubled CPU (0.5 → 1.0) and 4× memory (256M → 1G) to avoid api-service
+          # becoming the bottleneck now that MCP servers have better connection pools.
+          cpus: "1.0"
+          memory: 1G
+    healthcheck:
+      test: [ "CMD", "wget", "--no-verbose", "--tries=1", "--spider", "http://localhost:8100/health" ]
+      interval: 10s
+      timeout: 5s
+      retries: 3
+    networks:
+      - mcp-network
+
+  redis-seeder:
+    image: python:3.12-slim
+    container_name: mcp-redis-seeder
+    depends_on:
+      mcp-redis:
+        condition: service_healthy
+    volumes:
+      - ./infra/redis/seed.py:/seed.py:ro
+    command: sh -c "pip install redis --quiet && python3 /seed.py"
+    environment:
+      - REDIS_HOST=mcp-redis
+    networks:
+      - mcp-network
+    profiles:
+      - seeder
+
+  # ─── MCP Servers ─────────────────────────────────────────────────────────────
+
+  java-server:
+    build: ./java-server
+    container_name: mcp-java-server
+    ports:
+      - "8080:8080"
+    environment:
+      - SERVER_TYPE=java
+      - REDIS_URL=redis://mcp-redis:6379
+      - API_SERVICE_URL=http://mcp-api-service:8100
+    deploy:
+      resources:
+        limits:
+          cpus: "2.0"
+          memory: 2G
+    healthcheck:
+      test: [ "CMD", "wget", "--no-verbose", "--tries=1", "--spider", "http://localhost:8080/actuator/health" ]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 40s
+    networks:
+      - mcp-network
+
+  java-native-server:
+    build:
+      context: ./java-server
+      dockerfile: Dockerfile.native
+    container_name: mcp-java-native-server
+    ports:
+      - "8084:8080"
+    environment:
+      - SERVER_TYPE=java-native
+      - REDIS_URL=redis://mcp-redis:6379
+      - API_SERVICE_URL=http://mcp-api-service:8100
+    deploy:
+      resources:
+        limits:
+          cpus: "2.0"
+          memory: 2G
+    healthcheck:
+      test: [ "CMD", "wget", "--no-verbose", "--tries=1", "--spider", "http://localhost:8080/actuator/health" ]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 40s
+    networks:
+      - mcp-network
+
+  go-server:
+    build: ./go-server
+    container_name: mcp-go-server
+    ports:
+      - "8081:8081"
+    environment:
+      - SERVER_TYPE=go
+      - REDIS_URL=redis://mcp-redis:6379
+      - API_SERVICE_URL=http://mcp-api-service:8100
+    deploy:
+      resources:
+        limits:
+          cpus: "2.0"
+          memory: 2G
+    healthcheck:
+      test: [ "CMD", "wget", "--no-verbose", "--tries=1", "--spider", "http://localhost:8081/health" ]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+    networks:
+      - mcp-network
+
+  python-server:
+    build: ./python-server
+    container_name: mcp-python-server
+    ports:
+      - "8082:8082"
+    environment:
+      - SERVER_TYPE=python
+      - REDIS_URL=redis://mcp-redis:6379
+      - API_SERVICE_URL=http://mcp-api-service:8100
+    deploy:
+      resources:
+        limits:
+          cpus: "2.0"
+          memory: 2G
+    healthcheck:
+      test: [ "CMD", "python", "-c", "import urllib.request,json; urllib.request.urlopen(urllib.request.Request('http://localhost:8082/mcp',data=json.dumps({'jsonrpc':'2.0','id':1,'method':'initialize','params':{'protocolVersion':'2024-11-05','capabilities':{},'clientInfo':{'name':'health','version':'1.0'}}}).encode(),headers={'Content-Type':'application/json','Accept':'application/json, text/event-stream'}),timeout=5)" ]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+    networks:
+      - mcp-network
+
+  nodejs-server:
+    build: ./nodejs-server
+    container_name: mcp-nodejs-server
+    ports:
+      - "8083:8083"
+    environment:
+      - SERVER_TYPE=nodejs
+      # Node.js is single-threaded; WEB_CONCURRENCY=4 runs a cluster of 4 worker processes
+      # to utilize multiple CPU cores. This is the standard production setup for Node.js.
+      # All 4 workers share the 2-CPU / 2GB container resource limit.
+      - WEB_CONCURRENCY=4
+      - REDIS_URL=redis://mcp-redis:6379
+      - API_SERVICE_URL=http://mcp-api-service:8100
+    deploy:
+      resources:
+        limits:
+          cpus: "2.0"
+          memory: 2G
+    healthcheck:
+      test: [ "CMD", "wget", "--no-verbose", "--tries=1", "--spider", "http://localhost:8083/health" ]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+    networks:
+      - mcp-network
+
+  bun-server:
+    build:
+      context: ./nodejs-server
+      dockerfile: Dockerfile.bun
+    container_name: mcp-bun-server
+    ports:
+      - "8094:8083"
+    environment:
+      - SERVER_TYPE=bun
+      # Same JS code running on the Bun runtime (WEB_CONCURRENCY=4).
+      # Compares Bun vs Node.js V8 with identical application code and worker count.
+      - WEB_CONCURRENCY=4
+      - REDIS_URL=redis://mcp-redis:6379
+      - API_SERVICE_URL=http://mcp-api-service:8100
+    deploy:
+      resources:
+        limits:
+          cpus: "2.0"
+          memory: 2G
+    healthcheck:
+      test: [ "CMD", "wget", "--no-verbose", "--tries=1", "--spider", "http://localhost:8083/health" ]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+    networks:
+      - mcp-network
+
+  rust-server:
+    build: ./rust-server
+    container_name: mcp-rust-server
+    ports:
+      - "8095:8095"
+    environment:
+      - SERVER_TYPE=rust
+      - REDIS_URL=redis://mcp-redis:6379
+      - API_SERVICE_URL=http://mcp-api-service:8100
+    deploy:
+      resources:
+        limits:
+          cpus: "2.0"
+          memory: 2G
+    healthcheck:
+      test: [ "CMD", "curl", "-sf", "http://localhost:8095/health" ]
+      interval: 30s
+      timeout: 10s
+      retries: 5
+      start_period: 10s
+    networks:
+      - mcp-network
+
+  quarkus-server:
+    build: ./quarkus-server
+    container_name: mcp-quarkus-server
+    ports:
+      - "8085:8080"
+    environment:
+      - SERVER_TYPE=quarkus
+      - REDIS_URL=redis://mcp-redis:6379
+      - API_SERVICE_URL=http://mcp-api-service:8100
+    deploy:
+      resources:
+        limits:
+          cpus: "2.0"
+          memory: 2G
+    healthcheck:
+      test: [ "CMD", "wget", "--no-verbose", "--tries=1", "--spider", "http://localhost:8080/q/health" ]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+    networks:
+      - mcp-network
+
+  quarkus-native-server:
+    build:
+      context: ./quarkus-server
+      dockerfile: Dockerfile.native
+    container_name: mcp-quarkus-native-server
+    ports:
+      - "8086:8080"
+    environment:
+      - SERVER_TYPE=quarkus-native
+      - REDIS_URL=redis://mcp-redis:6379
+      - API_SERVICE_URL=http://mcp-api-service:8100
+    deploy:
+      resources:
+        limits:
+          cpus: "2.0"
+          memory: 2G
+    healthcheck:
+      test: [ "CMD", "wget", "--no-verbose", "--tries=1", "--spider", "http://localhost:8080/q/health" ]
+      interval: 30s
+      timeout: 10s
+      retries: 5
+    networks:
+      - mcp-network
+
+  java-vt-server:
+    build: ./java-vt-server
+    container_name: mcp-java-vt-server
+    ports:
+      - "8087:8080"
+    environment:
+      - SERVER_TYPE=java-vt
+      - REDIS_URL=redis://mcp-redis:6379
+      - API_SERVICE_URL=http://mcp-api-service:8100
+    deploy:
+      resources:
+        limits:
+          cpus: "2.0"
+          memory: 2G
+    healthcheck:
+      test: [ "CMD", "wget", "--no-verbose", "--tries=1", "--spider", "http://localhost:8080/actuator/health" ]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 40s
+    networks:
+      - mcp-network
+
+  java-vt-native-server:
+    build:
+      context: ./java-vt-server
+      dockerfile: Dockerfile.native
+    container_name: mcp-java-vt-native-server
+    ports:
+      - "8088:8080"
+    environment:
+      - SERVER_TYPE=java-vt-native
+      - REDIS_URL=redis://mcp-redis:6379
+      - API_SERVICE_URL=http://mcp-api-service:8100
+    deploy:
+      resources:
+        limits:
+          cpus: "2.0"
+          memory: 2G
+    healthcheck:
+      test: [ "CMD", "wget", "--no-verbose", "--tries=1", "--spider", "http://localhost:8080/actuator/health" ]
+      interval: 30s
+      timeout: 10s
+      retries: 5
+    networks:
+      - mcp-network
+
+  java-webflux-server:
+    build: ./java-webflux-server
+    container_name: mcp-java-webflux-server
+    ports:
+      - "8089:8080"
+    environment:
+      - SERVER_TYPE=java-webflux
+      - REDIS_URL=redis://mcp-redis:6379
+      - API_SERVICE_URL=http://mcp-api-service:8100
+    deploy:
+      resources:
+        limits:
+          cpus: "2.0"
+          memory: 2G
+    healthcheck:
+      test: [ "CMD", "wget", "--no-verbose", "--tries=1", "--spider", "http://localhost:8080/actuator/health" ]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 40s
+    networks:
+      - mcp-network
+
+  java-webflux-native-server:
+    build:
+      context: ./java-webflux-server
+      dockerfile: Dockerfile.native
+    container_name: mcp-java-webflux-native-server
+    ports:
+      - "8090:8080"
+    environment:
+      - SERVER_TYPE=java-webflux-native
+      - REDIS_URL=redis://mcp-redis:6379
+      - API_SERVICE_URL=http://mcp-api-service:8100
+    deploy:
+      resources:
+        limits:
+          cpus: "2.0"
+          memory: 2G
+    healthcheck:
+      test: [ "CMD", "wget", "--no-verbose", "--tries=1", "--spider", "http://localhost:8080/actuator/health" ]
+      interval: 30s
+      timeout: 10s
+      retries: 5
+    networks:
+      - mcp-network
+
+  micronaut-server:
+    build: ./micronaut-server
+    container_name: mcp-micronaut-server
+    ports:
+      - "8091:8080"
+    environment:
+      - REDIS_URL=redis://mcp-redis:6379
+      - API_SERVICE_URL=http://mcp-api-service:8100
+    deploy:
+      resources:
+        limits:
+          cpus: "2.0"
+          memory: 2G
+    healthcheck:
+      test: [ "CMD", "wget", "--no-verbose", "--tries=1", "--spider", "http://localhost:8080/health" ]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 40s
+    networks:
+      - mcp-network
+
+  micronaut-native-server:
+    build:
+      context: ./micronaut-server
+      dockerfile: Dockerfile.native
+    container_name: mcp-micronaut-native-server
+    ports:
+      - "8092:8080"
+    environment:
+      - REDIS_URL=redis://mcp-redis:6379
+      - API_SERVICE_URL=http://mcp-api-service:8100
+    deploy:
+      resources:
+        limits:
+          cpus: "2.0"
+          memory: 2G
+    healthcheck:
+      test: [ "CMD", "wget", "--no-verbose", "--tries=1", "--spider", "http://localhost:8080/health" ]
+      interval: 30s
+      timeout: 10s
+      retries: 5
+    networks:
+      - mcp-network
+
+networks:
+  mcp-network:
+    driver: bridge

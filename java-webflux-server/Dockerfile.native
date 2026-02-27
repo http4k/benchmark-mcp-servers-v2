@@ -1,0 +1,28 @@
+FROM ghcr.io/graalvm/native-image-community:25 AS builder
+
+WORKDIR /app
+
+RUN microdnf install findutils wget unzip \
+    && wget -q https://services.gradle.org/distributions/gradle-9.3.1-bin.zip \
+    && unzip -q gradle-9.3.1-bin.zip \
+    && rm gradle-9.3.1-bin.zip
+
+COPY build.gradle settings.gradle ./
+COPY src ./src
+
+RUN ./gradle-9.3.1/bin/gradle nativeCompile -x test --no-daemon
+
+FROM ubuntu:24.04
+
+WORKDIR /app
+
+RUN apt-get update && apt-get install -y wget && rm -rf /var/lib/apt/lists/*
+
+COPY --from=builder /app/build/native/nativeCompile/benchmark-mcp-java-webflux-server app
+
+EXPOSE 8080
+
+HEALTHCHECK --interval=30s --timeout=3s --start-period=40s --retries=3 \
+    CMD wget --no-verbose --tries=1 --spider http://localhost:8080/actuator/health || exit 1
+
+ENTRYPOINT ["/app/app", "-Dio.lettuce.core.epoll=false", "-Dio.lettuce.core.kqueue=false"]

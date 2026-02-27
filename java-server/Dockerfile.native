@@ -1,0 +1,32 @@
+FROM ghcr.io/graalvm/native-image-community:25 AS builder
+
+WORKDIR /app
+
+# Install gradle
+RUN microdnf install findutils wget unzip \
+    && wget -q https://services.gradle.org/distributions/gradle-9.3.1-bin.zip \
+    && unzip -q gradle-9.3.1-bin.zip \
+    && rm gradle-9.3.1-bin.zip
+
+COPY build.gradle settings.gradle ./
+COPY src ./src
+
+# Build native image
+RUN ./gradle-9.3.1/bin/gradle nativeCompile -x test --no-daemon
+
+# Final image
+FROM ubuntu:24.04
+
+WORKDIR /app
+
+# Ensure wget is available for docker-compose healthcheck
+RUN apt-get update && apt-get install -y wget && rm -rf /var/lib/apt/lists/*
+
+COPY --from=builder /app/build/native/nativeCompile/benchmark-mcp-java-server app
+
+EXPOSE 8080
+
+HEALTHCHECK --interval=30s --timeout=3s --start-period=40s --retries=3 \
+    CMD wget --no-verbose --tries=1 --spider http://localhost:8080/actuator/health || exit 1
+
+ENTRYPOINT ["/app/app"]

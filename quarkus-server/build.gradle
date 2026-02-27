@@ -1,0 +1,37 @@
+plugins {
+    id 'java'
+    id 'io.quarkus' version '3.31.4'
+}
+
+group = 'com.benchmark.mcp'
+version = '1.0.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+    mavenLocal()
+}
+
+dependencies {
+    implementation platform('io.quarkus.platform:quarkus-bom:3.31.4')
+    implementation 'io.quarkus:quarkus-smallrye-health'
+    implementation 'io.quarkiverse.mcp:quarkus-mcp-server-http:1.10.1'
+    implementation 'io.quarkus:quarkus-rest-client-jackson'
+    implementation 'io.quarkus:quarkus-redis-client'
+}
+
+java {
+    sourceCompatibility = JavaVersion.VERSION_21
+    targetCompatibility = JavaVersion.VERSION_21
+}
+
+sourceSets {
+    main {
+        java { srcDirs = ['src/main/java'] }
+        resources { srcDirs = ['src/main/resources'] }
+    }
+}
+
+compileJava {
+    options.encoding = 'UTF-8'
+    options.compilerArgs << '-parameters'
+}

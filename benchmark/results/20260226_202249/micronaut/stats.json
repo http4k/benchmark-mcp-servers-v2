@@ -1,0 +1,1495 @@
+{
+  "container": "mcp-micronaut-server",
+  "poll_interval_s": 1.0,
+  "sample_count": 164,
+  "samples": [
+    {
+      "timestamp": "2026-02-27T00:31:32.363881+00:00",
+      "cpu_percent": 0.37,
+      "memory_mb": 187.77,
+      "memory_percent": 9.17,
+      "memory_limit_mb": 2048.0,
+      "net_rx_bytes": 35588,
+      "net_tx_bytes": 27267
+    },
+    {
+      "timestamp": "2026-02-27T00:31:34.367140+00:00",
+      "cpu_percent": 183.82,
+      "memory_mb": 202.12,
+      "memory_percent": 9.87,
+      "memory_limit_mb": 2048.0,
+      "net_rx_bytes": 1013890,
+      "net_tx_bytes": 861605
+    },
+    {
+      "timestamp": "2026-02-27T00:31:36.369969+00:00",
+      "cpu_percent": 183.57,
+      "memory_mb": 208.34,
+      "memory_percent": 10.17,
+      "memory_limit_mb": 2048.0,
+      "net_rx_bytes": 4053260,
+      "net_tx_bytes": 3454684
+    },
+    {
+      "timestamp": "2026-02-27T00:31:38.373787+00:00",
+      "cpu_percent": 206.8,
+      "memory_mb": 219.48,
+      "memory_percent": 10.72,
+      "memory_limit_mb": 2048.0,
+      "net_rx_bytes": 8834607,
+      "net_tx_bytes": 7521702
+    },
+    {
+      "timestamp": "2026-02-27T00:31:40.377592+00:00",
+      "cpu_percent": 207.18,
+      "memory_mb": 236.92,
+      "memory_percent": 11.57,
+      "memory_limit_mb": 2048.0,
+      "net_rx_bytes": 14677039,
+      "net_tx_bytes": 12477832
+    },
+    {
+      "timestamp": "2026-02-27T00:31:42.381006+00:00",
+      "cpu_percent": 204.8,
+      "memory_mb": 240.39,
+      "memory_percent": 11.74,
+      "memory_limit_mb": 2048.0,
+      "net_rx_bytes": 21949096,
+      "net_tx_bytes": 18660265
+    },
+    {
+      "timestamp": "2026-02-27T00:31:44.384473+00:00",
+      "cpu_percent": 204.87,
+      "memory_mb": 240.85,
+      "memory_percent": 11.76,
+      "memory_limit_mb": 2048.0,
+      "net_rx_bytes": 30061061,
+      "net_tx_bytes": 25569522
+    },
+    {
+      "timestamp": "2026-02-27T00:31:46.387803+00:00",
+      "cpu_percent": 204.93,
+      "memory_mb": 235.0,
+      "memory_percent": 11.47,
+      "memory_limit_mb": 2048.0,
+      "net_rx_bytes": 39474884,
+      "net_tx_bytes": 33627645
+    },
+    {
+      "timestamp": "2026-02-27T00:31:48.391387+00:00",
+      "cpu_percent": 204.66,
+      "memory_mb": 234.18,
+      "memory_percent": 11.43,
+      "memory_limit_mb": 2048.0,
+      "net_rx_bytes": 49409132,
+      "net_tx_bytes": 42123939
+    },
+    {
+      "timestamp": "2026-02-27T00:31:50.395055+00:00",
+      "cpu_percent": 206.34,
+      "memory_mb": 235.33,
+      "memory_percent": 11.49,
+      "memory_limit_mb": 2048.0,
+      "net_rx_bytes": 60448842,
+      "net_tx_bytes": 51539382
+    },
+    {
+      "timestamp": "2026-02-27T00:31:52.399636+00:00",
+      "cpu_percent": 174.64,
+      "memory_mb": 255.54,
+      "memory_percent": 12.48,
+      "memory_limit_mb": 2048.0,
+      "net_rx_bytes": 72813127,
+      "net_tx_bytes": 62165462
+    },
+    {
+      "timestamp": "2026-02-27T00:31:54.403664+00:00",
+      "cpu_percent": 159.64,
+      "memory_mb": 251.27,
+      "memory_percent": 12.27,
+      "memory_limit_mb": 2048.0,
+      "net_rx_bytes": 86297727,
+      "net_tx_bytes": 73687790
+    },
+    {
+      "timestamp": "2026-02-27T00:31:56.407520+00:00",
+      "cpu_percent": 166.7,
+      "memory_mb": 253.59,
+      "memory_percent": 12.38,
+      "memory_limit_mb": 2048.0,
+      "net_rx_bytes": 99274390,
+      "net_tx_bytes": 84801762
+    },
+    {
+      "timestamp": "2026-02-27T00:31:58.411160+00:00",
+      "cpu_percent": 151.99,
+      "memory_mb": 251.04,
+      "memory_percent": 12.26,
+      "memory_limit_mb": 2048.0,
+      "net_rx_bytes": 112391615,
+      "net_tx_bytes": 96023199
+    },
+    {
+      "timestamp": "2026-02-27T00:32:00.414083+00:00",
+      "cpu_percent": 140.34,
+      "memory_mb": 251.29,
+      "memory_percent": 12.27,
+      "memory_limit_mb": 2048.0,
+      "net_rx_bytes": 125503908,
+      "net_tx_bytes": 107233955
+    },
+    {
+      "timestamp": "2026-02-27T00:32:02.418039+00:00",
+      "cpu_percent": 146.44,
+      "memory_mb": 251.09,
+      "memory_percent": 12.26,
+      "memory_limit_mb": 2048.0,
+      "net_rx_bytes": 138770141,
+      "net_tx_bytes": 118542039
+    },
+    {
+      "timestamp": "2026-02-27T00:32:04.421814+00:00",
+      "cpu_percent": 204.02,
+      "memory_mb": 260.1,
+      "memory_percent": 12.7,
+      "memory_limit_mb": 2048.0,
+      "net_rx_bytes": 150320794,
+      "net_tx_bytes": 128384957
+    },
+    {
+      "timestamp": "2026-02-27T00:32:06.425565+00:00",
+      "cpu_percent": 161.75,
+      "memory_mb": 257.52,
+      "memory_percent": 12.57,
+      "memory_limit_mb": 2048.0,
+      "net_rx_bytes": 162498384,
+      "net_tx_bytes": 138865905
+    },
+    {
+      "timestamp": "2026-02-27T00:32:08.429090+00:00",
+      "cpu_percent": 150.17,
+      "memory_mb": 252.27,
+      "memory_percent": 12.32,
+      "memory_limit_mb": 2048.0,
+      "net_rx_bytes": 175682007,
+      "net_tx_bytes": 150127694
+    },
+    {
+      "timestamp": "2026-02-27T00:32:10.433061+00:00",
+      "cpu_percent": 146.63,
+      "memory_mb": 252.45,
+      "memory_percent": 12.33,
+      "memory_limit_mb": 2048.0,
+      "net_rx_bytes": 188937670,
+      "net_tx_bytes": 161473024
+    },
+    {
+      "timestamp": "2026-02-27T00:32:12.438072+00:00",
+      "cpu_percent": 152.48,
+      "memory_mb": 252.52,
+      "memory_percent": 12.33,
+      "memory_limit_mb": 2048.0,
+      "net_rx_bytes": 202528927,
+      "net_tx_bytes": 173113312
+    },
+    {
+      "timestamp": "2026-02-27T00:32:14.442341+00:00",
+      "cpu_percent": 150.46,
+      "memory_mb": 252.71,
+      "memory_percent": 12.34,
+      "memory_limit_mb": 2048.0,
+      "net_rx_bytes": 215720292,
+      "net_tx_bytes": 184374645
+    },
+    {
+      "timestamp": "2026-02-27T00:32:16.445977+00:00",
+      "cpu_percent": 154.1,
+      "memory_mb": 252.79,
+      "memory_percent": 12.34,
+      "memory_limit_mb": 2048.0,
+      "net_rx_bytes": 229256576,
+      "net_tx_bytes": 195955257
+    },
+    {
+      "timestamp": "2026-02-27T00:32:18.449292+00:00",
+      "cpu_percent": 149.4,
+      "memory_mb": 252.11,
+      "memory_percent": 12.31,
+      "memory_limit_mb": 2048.0,
+      "net_rx_bytes": 242592203,
+      "net_tx_bytes": 207387439
+    },
+    {
+      "timestamp": "2026-02-27T00:32:20.453122+00:00",
+      "cpu_percent": 144.99,
+      "memory_mb": 250.25,
+      "memory_percent": 12.22,
+      "memory_limit_mb": 2048.0,
+      "net_rx_bytes": 255855224,
+      "net_tx_bytes": 218716126
+    },
+    {
+      "timestamp": "2026-02-27T00:32:22.458260+00:00",
+      "cpu_percent": 142.1,
+      "memory_mb": 246.41,
+      "memory_percent": 12.03,
+      "memory_limit_mb": 2048.0,
+      "net_rx_bytes": 269241905,
+      "net_tx_bytes": 230121986
+    },
+    {
+      "timestamp": "2026-02-27T00:32:24.461775+00:00",
+      "cpu_percent": 146.96,
+      "memory_mb": 246.13,
+      "memory_percent": 12.02,
+      "memory_limit_mb": 2048.0,
+      "net_rx_bytes": 282553205,
+      "net_tx_bytes": 241557744
+    },
+    {
+      "timestamp": "2026-02-27T00:32:26.465148+00:00",
+      "cpu_percent": 149.07,
+      "memory_mb": 243.23,
+      "memory_percent": 11.88,
+      "memory_limit_mb": 2048.0,
+      "net_rx_bytes": 295866354,
+      "net_tx_bytes": 252944663
+    },
+    {
+      "timestamp": "2026-02-27T00:32:28.469488+00:00",
+      "cpu_percent": 153.81,
+      "memory_mb": 243.05,
+      "memory_percent": 11.87,
+      "memory_limit_mb": 2048.0,
+      "net_rx_bytes": 309410814,
+      "net_tx_bytes": 264507555
+    },
+    {
+      "timestamp": "2026-02-27T00:32:30.473395+00:00",
+      "cpu_percent": 155.4,
+      "memory_mb": 242.27,
+      "memory_percent": 11.83,
+      "memory_limit_mb": 2048.0,
+      "net_rx_bytes": 322826225,
+      "net_tx_bytes": 275989605
+    },
+    {
+      "timestamp": "2026-02-27T00:32:32.478179+00:00",
+      "cpu_percent": 150.39,
+      "memory_mb": 239.68,
+      "memory_percent": 11.7,
+      "memory_limit_mb": 2048.0,
+      "net_rx_bytes": 335885195,
+      "net_tx_bytes": 287165019
+    },
+    {
+      "timestamp": "2026-02-27T00:32:34.482048+00:00",
+      "cpu_percent": 200.8,
+      "memory_mb": 245.61,
+      "memory_percent": 11.99,
+      "memory_limit_mb": 2048.0,
+      "net_rx_bytes": 348625815,
+      "net_tx_bytes": 298037910
+    },
+    {
+      "timestamp": "2026-02-27T00:32:36.485582+00:00",
+      "cpu_percent": 156.87,
+      "memory_mb": 242.16,
+      "memory_percent": 11.82,
+      "memory_limit_mb": 2048.0,
+      "net_rx_bytes": 361957788,
+      "net_tx_bytes": 309443534
+    },
+    {
+      "timestamp": "2026-02-27T00:32:38.489554+00:00",
+      "cpu_percent": 140.9,
+      "memory_mb": 235.82,
+      "memory_percent": 11.51,
+      "memory_limit_mb": 2048.0,
+      "net_rx_bytes": 374995290,
+      "net_tx_bytes": 320592035
+    },
+    {
+      "timestamp": "2026-02-27T00:32:40.493261+00:00",
+      "cpu_percent": 150.12,
+      "memory_mb": 236.71,
+      "memory_percent": 11.56,
+      "memory_limit_mb": 2048.0,
+      "net_rx_bytes": 388569845,
+      "net_tx_bytes": 332208856
+    },
+    {
+      "timestamp": "2026-02-27T00:32:42.497498+00:00",
+      "cpu_percent": 148.78,
+      "memory_mb": 233.19,
+      "memory_percent": 11.39,
+      "memory_limit_mb": 2048.0,
+      "net_rx_bytes": 401710692,
+      "net_tx_bytes": 343448380
+    },
+    {
+      "timestamp": "2026-02-27T00:32:44.500749+00:00",
+      "cpu_percent": 151.35,
+      "memory_mb": 232.65,
+      "memory_percent": 11.36,
+      "memory_limit_mb": 2048.0,
+      "net_rx_bytes": 414949108,
+      "net_tx_bytes": 354773722
+    },
+    {
+      "timestamp": "2026-02-27T00:32:46.505036+00:00",
+      "cpu_percent": 150.75,
+      "memory_mb": 229.82,
+      "memory_percent": 11.22,
+      "memory_limit_mb": 2048.0,
+      "net_rx_bytes": 428127373,
+      "net_tx_bytes": 366043400
+    },
+    {
+      "timestamp": "2026-02-27T00:32:48.508108+00:00",
+      "cpu_percent": 152.0,
+      "memory_mb": 229.98,
+      "memory_percent": 11.23,
+      "memory_limit_mb": 2048.0,
+      "net_rx_bytes": 441516481,
+      "net_tx_bytes": 377470836
+    },
+    {
+      "timestamp": "2026-02-27T00:32:50.513672+00:00",
+      "cpu_percent": 147.72,
+      "memory_mb": 229.83,
+      "memory_percent": 11.22,
+      "memory_limit_mb": 2048.0,
+      "net_rx_bytes": 454565438,
+      "net_tx_bytes": 388652512
+    },
+    {
+      "timestamp": "2026-02-27T00:32:52.517451+00:00",
+      "cpu_percent": 153.66,
+      "memory_mb": 229.42,
+      "memory_percent": 11.2,
+      "memory_limit_mb": 2048.0,
+      "net_rx_bytes": 467778242,
+      "net_tx_bytes": 399949817
+    },
+    {
+      "timestamp": "2026-02-27T00:32:54.521641+00:00",
+      "cpu_percent": 145.47,
+      "memory_mb": 229.77,
+      "memory_percent": 11.22,
+      "memory_limit_mb": 2048.0,
+      "net_rx_bytes": 480995025,
+      "net_tx_bytes": 411254228
+    },
+    {
+      "timestamp": "2026-02-27T00:32:56.524721+00:00",
+      "cpu_percent": 144.18,
+      "memory_mb": 230.09,
+      "memory_percent": 11.23,
+      "memory_limit_mb": 2048.0,
+      "net_rx_bytes": 493965528,
+      "net_tx_bytes": 422347668
+    },
+    {
+      "timestamp": "2026-02-27T00:32:58.528158+00:00",
+      "cpu_percent": 143.37,
+      "memory_mb": 229.54,
+      "memory_percent": 11.21,
+      "memory_limit_mb": 2048.0,
+      "net_rx_bytes": 507003615,
+      "net_tx_bytes": 433469948
+    },
+    {
+      "timestamp": "2026-02-27T00:33:00.532805+00:00",
+      "cpu_percent": 148.68,
+      "memory_mb": 230.2,
+      "memory_percent": 11.24,
+      "memory_limit_mb": 2048.0,
+      "net_rx_bytes": 520122689,
+      "net_tx_bytes": 444697161
+    },
+    {
+      "timestamp": "2026-02-27T00:33:02.536173+00:00",
+      "cpu_percent": 141.4,
+      "memory_mb": 230.0,
+      "memory_percent": 11.23,
+      "memory_limit_mb": 2048.0,
+      "net_rx_bytes": 533098285,
+      "net_tx_bytes": 455791789
+    },
+    {
+      "timestamp": "2026-02-27T00:33:04.539602+00:00",
+      "cpu_percent": 157.07,
+      "memory_mb": 229.77,
+      "memory_percent": 11.22,
+      "memory_limit_mb": 2048.0,
+      "net_rx_bytes": 546509661,
+      "net_tx_bytes": 467261954
+    },
+    {
+      "timestamp": "2026-02-27T00:33:06.544048+00:00",
+      "cpu_percent": 159.36,
+      "memory_mb": 229.94,
+      "memory_percent": 11.23,
+      "memory_limit_mb": 2048.0,
+      "net_rx_bytes": 559695143,
+      "net_tx_bytes": 478547344
+    },
+    {
+      "timestamp": "2026-02-27T00:33:08.547541+00:00",
+      "cpu_percent": 149.5,
+      "memory_mb": 230.46,
+      "memory_percent": 11.25,
+      "memory_limit_mb": 2048.0,
+      "net_rx_bytes": 572967639,
+      "net_tx_bytes": 489891211
+    },
+    {
+      "timestamp": "2026-02-27T00:33:10.551061+00:00",
+      "cpu_percent": 151.93,
+      "memory_mb": 230.69,
+      "memory_percent": 11.26,
+      "memory_limit_mb": 2048.0,
+      "net_rx_bytes": 586148881,
+      "net_tx_bytes": 501152489
+    },
+    {
+      "timestamp": "2026-02-27T00:33:12.555269+00:00",
+      "cpu_percent": 149.77,
+      "memory_mb": 230.33,
+      "memory_percent": 11.25,
+      "memory_limit_mb": 2048.0,
+      "net_rx_bytes": 599431475,
+      "net_tx_bytes": 512505966
+    },
+    {
+      "timestamp": "2026-02-27T00:33:14.559627+00:00",
+      "cpu_percent": 146.41,
+      "memory_mb": 230.11,
+      "memory_percent": 11.24,
+      "memory_limit_mb": 2048.0,
+      "net_rx_bytes": 612513566,
+      "net_tx_bytes": 523695828
+    },
+    {
+      "timestamp": "2026-02-27T00:33:16.562846+00:00",
+      "cpu_percent": 140.25,
+      "memory_mb": 229.58,
+      "memory_percent": 11.21,
+      "memory_limit_mb": 2048.0,
+      "net_rx_bytes": 625416607,
+      "net_tx_bytes": 534696093
+    },
+    {
+      "timestamp": "2026-02-27T00:33:18.566648+00:00",
+      "cpu_percent": 147.28,
+      "memory_mb": 230.36,
+      "memory_percent": 11.25,
+      "memory_limit_mb": 2048.0,
+      "net_rx_bytes": 638802943,
+      "net_tx_bytes": 546183320
+    },
+    {
+      "timestamp": "2026-02-27T00:33:20.570094+00:00",
+      "cpu_percent": 148.04,
+      "memory_mb": 230.11,
+      "memory_percent": 11.24,
+      "memory_limit_mb": 2048.0,
+      "net_rx_bytes": 652185665,
+      "net_tx_bytes": 557619939
+    },
+    {
+      "timestamp": "2026-02-27T00:33:22.573629+00:00",
+      "cpu_percent": 147.26,
+      "memory_mb": 230.64,
+      "memory_percent": 11.26,
+      "memory_limit_mb": 2048.0,
+      "net_rx_bytes": 665414480,
+      "net_tx_bytes": 568945129
+    },
+    {
+      "timestamp": "2026-02-27T00:33:24.576799+00:00",
+      "cpu_percent": 165.79,
+      "memory_mb": 230.73,
+      "memory_percent": 11.27,
+      "memory_limit_mb": 2048.0,
+      "net_rx_bytes": 679352290,
+      "net_tx_bytes": 580862368
+    },
+    {
+      "timestamp": "2026-02-27T00:33:26.581049+00:00",
+      "cpu_percent": 151.46,
+      "memory_mb": 230.3,
+      "memory_percent": 11.25,
+      "memory_limit_mb": 2048.0,
+      "net_rx_bytes": 692714573,
+      "net_tx_bytes": 592285566
+    },
+    {
+      "timestamp": "2026-02-27T00:33:28.585481+00:00",
+      "cpu_percent": 149.36,
+      "memory_mb": 230.82,
+      "memory_percent": 11.27,
+      "memory_limit_mb": 2048.0,
+      "net_rx_bytes": 705970746,
+      "net_tx_bytes": 603629577
+    },
+    {
+      "timestamp": "2026-02-27T00:33:30.588830+00:00",
+      "cpu_percent": 144.08,
+      "memory_mb": 230.53,
+      "memory_percent": 11.26,
+      "memory_limit_mb": 2048.0,
+      "net_rx_bytes": 719287865,
+      "net_tx_bytes": 615019687
+    },
+    {
+      "timestamp": "2026-02-27T00:33:32.592592+00:00",
+      "cpu_percent": 143.0,
+      "memory_mb": 229.88,
+      "memory_percent": 11.22,
+      "memory_limit_mb": 2048.0,
+      "net_rx_bytes": 732233301,
+      "net_tx_bytes": 626092326
+    },
+    {
+      "timestamp": "2026-02-27T00:33:34.596783+00:00",
+      "cpu_percent": 177.56,
+      "memory_mb": 230.37,
+      "memory_percent": 11.25,
+      "memory_limit_mb": 2048.0,
+      "net_rx_bytes": 745218781,
+      "net_tx_bytes": 637192837
+    },
+    {
+      "timestamp": "2026-02-27T00:33:36.600131+00:00",
+      "cpu_percent": 143.89,
+      "memory_mb": 229.66,
+      "memory_percent": 11.21,
+      "memory_limit_mb": 2048.0,
+      "net_rx_bytes": 758161449,
+      "net_tx_bytes": 648271325
+    },
+    {
+      "timestamp": "2026-02-27T00:33:38.603542+00:00",
+      "cpu_percent": 153.84,
+      "memory_mb": 231.11,
+      "memory_percent": 11.28,
+      "memory_limit_mb": 2048.0,
+      "net_rx_bytes": 771448315,
+      "net_tx_bytes": 659634873
+    },
+    {
+      "timestamp": "2026-02-27T00:33:40.606985+00:00",
+      "cpu_percent": 153.69,
+      "memory_mb": 230.45,
+      "memory_percent": 11.25,
+      "memory_limit_mb": 2048.0,
+      "net_rx_bytes": 784674591,
+      "net_tx_bytes": 670942546
+    },
+    {
+      "timestamp": "2026-02-27T00:33:42.611425+00:00",
+      "cpu_percent": 142.19,
+      "memory_mb": 230.26,
+      "memory_percent": 11.24,
+      "memory_limit_mb": 2048.0,
+      "net_rx_bytes": 797814472,
+      "net_tx_bytes": 682167902
+    },
+    {
+      "timestamp": "2026-02-27T00:33:44.614928+00:00",
+      "cpu_percent": 150.84,
+      "memory_mb": 230.21,
+      "memory_percent": 11.24,
+      "memory_limit_mb": 2048.0,
+      "net_rx_bytes": 811121040,
+      "net_tx_bytes": 693550055
+    },
+    {
+      "timestamp": "2026-02-27T00:33:46.619435+00:00",
+      "cpu_percent": 149.64,
+      "memory_mb": 230.18,
+      "memory_percent": 11.24,
+      "memory_limit_mb": 2048.0,
+      "net_rx_bytes": 824410272,
+      "net_tx_bytes": 704893060
+    },
+    {
+      "timestamp": "2026-02-27T00:33:48.624025+00:00",
+      "cpu_percent": 145.48,
+      "memory_mb": 230.62,
+      "memory_percent": 11.26,
+      "memory_limit_mb": 2048.0,
+      "net_rx_bytes": 837790441,
+      "net_tx_bytes": 716368929
+    },
+    {
+      "timestamp": "2026-02-27T00:33:50.628157+00:00",
+      "cpu_percent": 150.63,
+      "memory_mb": 230.57,
+      "memory_percent": 11.26,
+      "memory_limit_mb": 2048.0,
+      "net_rx_bytes": 851413868,
+      "net_tx_bytes": 727984661
+    },
+    {
+      "timestamp": "2026-02-27T00:33:52.632139+00:00",
+      "cpu_percent": 154.74,
+      "memory_mb": 230.98,
+      "memory_percent": 11.28,
+      "memory_limit_mb": 2048.0,
+      "net_rx_bytes": 864843375,
+      "net_tx_bytes": 739475579
+    },
+    {
+      "timestamp": "2026-02-27T00:33:54.636173+00:00",
+      "cpu_percent": 146.66,
+      "memory_mb": 230.85,
+      "memory_percent": 11.27,
+      "memory_limit_mb": 2048.0,
+      "net_rx_bytes": 878026171,
+      "net_tx_bytes": 750737351
+    },
+    {
+      "timestamp": "2026-02-27T00:33:56.639721+00:00",
+      "cpu_percent": 148.45,
+      "memory_mb": 231.04,
+      "memory_percent": 11.28,
+      "memory_limit_mb": 2048.0,
+      "net_rx_bytes": 891232455,
+      "net_tx_bytes": 762071700
+    },
+    {
+      "timestamp": "2026-02-27T00:33:58.643352+00:00",
+      "cpu_percent": 147.27,
+      "memory_mb": 230.51,
+      "memory_percent": 11.26,
+      "memory_limit_mb": 2048.0,
+      "net_rx_bytes": 904401151,
+      "net_tx_bytes": 773291136
+    },
+    {
+      "timestamp": "2026-02-27T00:34:00.647185+00:00",
+      "cpu_percent": 139.84,
+      "memory_mb": 230.75,
+      "memory_percent": 11.27,
+      "memory_limit_mb": 2048.0,
+      "net_rx_bytes": 917175866,
+      "net_tx_bytes": 784253327
+    },
+    {
+      "timestamp": "2026-02-27T00:34:02.650954+00:00",
+      "cpu_percent": 151.17,
+      "memory_mb": 230.48,
+      "memory_percent": 11.25,
+      "memory_limit_mb": 2048.0,
+      "net_rx_bytes": 930544310,
+      "net_tx_bytes": 795694417
+    },
+    {
+      "timestamp": "2026-02-27T00:34:04.656427+00:00",
+      "cpu_percent": 153.09,
+      "memory_mb": 230.98,
+      "memory_percent": 11.28,
+      "memory_limit_mb": 2048.0,
+      "net_rx_bytes": 942765117,
+      "net_tx_bytes": 806140909
+    },
+    {
+      "timestamp": "2026-02-27T00:34:06.659944+00:00",
+      "cpu_percent": 149.44,
+      "memory_mb": 231.39,
+      "memory_percent": 11.3,
+      "memory_limit_mb": 2048.0,
+      "net_rx_bytes": 955888004,
+      "net_tx_bytes": 817366148
+    },
+    {
+      "timestamp": "2026-02-27T00:34:08.663508+00:00",
+      "cpu_percent": 151.07,
+      "memory_mb": 231.44,
+      "memory_percent": 11.3,
+      "memory_limit_mb": 2048.0,
+      "net_rx_bytes": 969102938,
+      "net_tx_bytes": 828650386
+    },
+    {
+      "timestamp": "2026-02-27T00:34:10.666732+00:00",
+      "cpu_percent": 154.82,
+      "memory_mb": 231.05,
+      "memory_percent": 11.28,
+      "memory_limit_mb": 2048.0,
+      "net_rx_bytes": 982473538,
+      "net_tx_bytes": 840074463
+    },
+    {
+      "timestamp": "2026-02-27T00:34:12.670051+00:00",
+      "cpu_percent": 141.18,
+      "memory_mb": 230.68,
+      "memory_percent": 11.26,
+      "memory_limit_mb": 2048.0,
+      "net_rx_bytes": 995435909,
+      "net_tx_bytes": 851197336
+    },
+    {
+      "timestamp": "2026-02-27T00:34:14.673276+00:00",
+      "cpu_percent": 153.33,
+      "memory_mb": 231.21,
+      "memory_percent": 11.29,
+      "memory_limit_mb": 2048.0,
+      "net_rx_bytes": 1008834628,
+      "net_tx_bytes": 862653840
+    },
+    {
+      "timestamp": "2026-02-27T00:34:16.677045+00:00",
+      "cpu_percent": 153.94,
+      "memory_mb": 231.12,
+      "memory_percent": 11.29,
+      "memory_limit_mb": 2048.0,
+      "net_rx_bytes": 1021899555,
+      "net_tx_bytes": 873798021
+    },
+    {
+      "timestamp": "2026-02-27T00:34:18.681077+00:00",
+      "cpu_percent": 141.19,
+      "memory_mb": 230.93,
+      "memory_percent": 11.28,
+      "memory_limit_mb": 2048.0,
+      "net_rx_bytes": 1034627863,
+      "net_tx_bytes": 884702657
+    },
+    {
+      "timestamp": "2026-02-27T00:34:20.684366+00:00",
+      "cpu_percent": 150.2,
+      "memory_mb": 231.67,
+      "memory_percent": 11.31,
+      "memory_limit_mb": 2048.0,
+      "net_rx_bytes": 1047973827,
+      "net_tx_bytes": 896116067
+    },
+    {
+      "timestamp": "2026-02-27T00:34:22.688082+00:00",
+      "cpu_percent": 149.68,
+      "memory_mb": 231.68,
+      "memory_percent": 11.31,
+      "memory_limit_mb": 2048.0,
+      "net_rx_bytes": 1060961576,
+      "net_tx_bytes": 907199124
+    },
+    {
+      "timestamp": "2026-02-27T00:34:24.692331+00:00",
+      "cpu_percent": 156.08,
+      "memory_mb": 231.21,
+      "memory_percent": 11.29,
+      "memory_limit_mb": 2048.0,
+      "net_rx_bytes": 1074205439,
+      "net_tx_bytes": 918551428
+    },
+    {
+      "timestamp": "2026-02-27T00:34:26.696062+00:00",
+      "cpu_percent": 144.4,
+      "memory_mb": 231.65,
+      "memory_percent": 11.31,
+      "memory_limit_mb": 2048.0,
+      "net_rx_bytes": 1087272557,
+      "net_tx_bytes": 929724611
+    },
+    {
+      "timestamp": "2026-02-27T00:34:28.699543+00:00",
+      "cpu_percent": 147.17,
+      "memory_mb": 231.68,
+      "memory_percent": 11.31,
+      "memory_limit_mb": 2048.0,
+      "net_rx_bytes": 1100207405,
+      "net_tx_bytes": 940785504
+    },
+    {
+      "timestamp": "2026-02-27T00:34:30.703472+00:00",
+      "cpu_percent": 146.41,
+      "memory_mb": 230.68,
+      "memory_percent": 11.26,
+      "memory_limit_mb": 2048.0,
+      "net_rx_bytes": 1113228260,
+      "net_tx_bytes": 951917129
+    },
+    {
+      "timestamp": "2026-02-27T00:34:32.707572+00:00",
+      "cpu_percent": 146.36,
+      "memory_mb": 231.23,
+      "memory_percent": 11.29,
+      "memory_limit_mb": 2048.0,
+      "net_rx_bytes": 1126569142,
+      "net_tx_bytes": 963291739
+    },
+    {
+      "timestamp": "2026-02-27T00:34:34.712200+00:00",
+      "cpu_percent": 153.37,
+      "memory_mb": 231.82,
+      "memory_percent": 11.32,
+      "memory_limit_mb": 2048.0,
+      "net_rx_bytes": 1139228034,
+      "net_tx_bytes": 974138414
+    },
+    {
+      "timestamp": "2026-02-27T00:34:36.715223+00:00",
+      "cpu_percent": 155.56,
+      "memory_mb": 231.02,
+      "memory_percent": 11.28,
+      "memory_limit_mb": 2048.0,
+      "net_rx_bytes": 1152225539,
+      "net_tx_bytes": 985272215
+    },
+    {
+      "timestamp": "2026-02-27T00:34:38.718273+00:00",
+      "cpu_percent": 155.24,
+      "memory_mb": 231.72,
+      "memory_percent": 11.31,
+      "memory_limit_mb": 2048.0,
+      "net_rx_bytes": 1165374768,
+      "net_tx_bytes": 996513059
+    },
+    {
+      "timestamp": "2026-02-27T00:34:40.721806+00:00",
+      "cpu_percent": 147.92,
+      "memory_mb": 231.0,
+      "memory_percent": 11.28,
+      "memory_limit_mb": 2048.0,
+      "net_rx_bytes": 1178924396,
+      "net_tx_bytes": 1008095561
+    },
+    {
+      "timestamp": "2026-02-27T00:34:42.725297+00:00",
+      "cpu_percent": 146.03,
+      "memory_mb": 231.62,
+      "memory_percent": 11.31,
+      "memory_limit_mb": 2048.0,
+      "net_rx_bytes": 1191839552,
+      "net_tx_bytes": 1019126993
+    },
+    {
+      "timestamp": "2026-02-27T00:34:44.728654+00:00",
+      "cpu_percent": 138.72,
+      "memory_mb": 231.92,
+      "memory_percent": 11.32,
+      "memory_limit_mb": 2048.0,
+      "net_rx_bytes": 1204414075,
+      "net_tx_bytes": 1029886215
+    },
+    {
+      "timestamp": "2026-02-27T00:34:46.732495+00:00",
+      "cpu_percent": 147.11,
+      "memory_mb": 231.76,
+      "memory_percent": 11.32,
+      "memory_limit_mb": 2048.0,
+      "net_rx_bytes": 1217224707,
+      "net_tx_bytes": 1040806282
+    },
+    {
+      "timestamp": "2026-02-27T00:34:48.737207+00:00",
+      "cpu_percent": 156.74,
+      "memory_mb": 231.15,
+      "memory_percent": 11.29,
+      "memory_limit_mb": 2048.0,
+      "net_rx_bytes": 1230125919,
+      "net_tx_bytes": 1051857566
+    },
+    {
+      "timestamp": "2026-02-27T00:34:50.741622+00:00",
+      "cpu_percent": 148.41,
+      "memory_mb": 231.74,
+      "memory_percent": 11.32,
+      "memory_limit_mb": 2048.0,
+      "net_rx_bytes": 1243397595,
+      "net_tx_bytes": 1063199661
+    },
+    {
+      "timestamp": "2026-02-27T00:34:52.745337+00:00",
+      "cpu_percent": 150.51,
+      "memory_mb": 231.52,
+      "memory_percent": 11.3,
+      "memory_limit_mb": 2048.0,
+      "net_rx_bytes": 1256477735,
+      "net_tx_bytes": 1074410391
+    },
+    {
+      "timestamp": "2026-02-27T00:34:54.749580+00:00",
+      "cpu_percent": 139.16,
+      "memory_mb": 232.1,
+      "memory_percent": 11.33,
+      "memory_limit_mb": 2048.0,
+      "net_rx_bytes": 1269289200,
+      "net_tx_bytes": 1085338410
+    },
+    {
+      "timestamp": "2026-02-27T00:34:56.752599+00:00",
+      "cpu_percent": 147.93,
+      "memory_mb": 231.43,
+      "memory_percent": 11.3,
+      "memory_limit_mb": 2048.0,
+      "net_rx_bytes": 1282236408,
+      "net_tx_bytes": 1096413076
+    },
+    {
+      "timestamp": "2026-02-27T00:34:58.756895+00:00",
+      "cpu_percent": 144.95,
+      "memory_mb": 231.14,
+      "memory_percent": 11.29,
+      "memory_limit_mb": 2048.0,
+      "net_rx_bytes": 1295111469,
+      "net_tx_bytes": 1107412188
+    },
+    {
+      "timestamp": "2026-02-27T00:35:00.763816+00:00",
+      "cpu_percent": 145.04,
+      "memory_mb": 230.96,
+      "memory_percent": 11.28,
+      "memory_limit_mb": 2048.0,
+      "net_rx_bytes": 1308233880,
+      "net_tx_bytes": 1118615735
+    },
+    {
+      "timestamp": "2026-02-27T00:35:02.767377+00:00",
+      "cpu_percent": 151.46,
+      "memory_mb": 231.55,
+      "memory_percent": 11.31,
+      "memory_limit_mb": 2048.0,
+      "net_rx_bytes": 1321600519,
+      "net_tx_bytes": 1130101753
+    },
+    {
+      "timestamp": "2026-02-27T00:35:04.770799+00:00",
+      "cpu_percent": 152.29,
+      "memory_mb": 231.36,
+      "memory_percent": 11.3,
+      "memory_limit_mb": 2048.0,
+      "net_rx_bytes": 1334953703,
+      "net_tx_bytes": 1141511383
+    },
+    {
+      "timestamp": "2026-02-27T00:35:06.774951+00:00",
+      "cpu_percent": 143.78,
+      "memory_mb": 231.16,
+      "memory_percent": 11.29,
+      "memory_limit_mb": 2048.0,
+      "net_rx_bytes": 1347780738,
+      "net_tx_bytes": 1152493009
+    },
+    {
+      "timestamp": "2026-02-27T00:35:08.778599+00:00",
+      "cpu_percent": 149.18,
+      "memory_mb": 231.38,
+      "memory_percent": 11.3,
+      "memory_limit_mb": 2048.0,
+      "net_rx_bytes": 1360965436,
+      "net_tx_bytes": 1163758363
+    },
+    {
+      "timestamp": "2026-02-27T00:35:10.781882+00:00",
+      "cpu_percent": 147.69,
+      "memory_mb": 231.45,
+      "memory_percent": 11.3,
+      "memory_limit_mb": 2048.0,
+      "net_rx_bytes": 1374041065,
+      "net_tx_bytes": 1174944587
+    },
+    {
+      "timestamp": "2026-02-27T00:35:12.786841+00:00",
+      "cpu_percent": 145.31,
+      "memory_mb": 231.23,
+      "memory_percent": 11.29,
+      "memory_limit_mb": 2048.0,
+      "net_rx_bytes": 1386904684,
+      "net_tx_bytes": 1185921565
+    },
+    {
+      "timestamp": "2026-02-27T00:35:14.790813+00:00",
+      "cpu_percent": 160.85,
+      "memory_mb": 231.9,
+      "memory_percent": 11.32,
+      "memory_limit_mb": 2048.0,
+      "net_rx_bytes": 1400073346,
+      "net_tx_bytes": 1197206606
+    },
+    {
+      "timestamp": "2026-02-27T00:35:16.794742+00:00",
+      "cpu_percent": 150.94,
+      "memory_mb": 231.41,
+      "memory_percent": 11.3,
+      "memory_limit_mb": 2048.0,
+      "net_rx_bytes": 1413171460,
+      "net_tx_bytes": 1208370549
+    },
+    {
+      "timestamp": "2026-02-27T00:35:18.798482+00:00",
+      "cpu_percent": 152.69,
+      "memory_mb": 231.96,
+      "memory_percent": 11.33,
+      "memory_limit_mb": 2048.0,
+      "net_rx_bytes": 1426594668,
+      "net_tx_bytes": 1219883843
+    },
+    {
+      "timestamp": "2026-02-27T00:35:20.801929+00:00",
+      "cpu_percent": 153.3,
+      "memory_mb": 231.42,
+      "memory_percent": 11.3,
+      "memory_limit_mb": 2048.0,
+      "net_rx_bytes": 1439712774,
+      "net_tx_bytes": 1231104748
+    },
+    {
+      "timestamp": "2026-02-27T00:35:22.806164+00:00",
+      "cpu_percent": 155.98,
+      "memory_mb": 231.85,
+      "memory_percent": 11.32,
+      "memory_limit_mb": 2048.0,
+      "net_rx_bytes": 1453002024,
+      "net_tx_bytes": 1242471991
+    },
+    {
+      "timestamp": "2026-02-27T00:35:24.809368+00:00",
+      "cpu_percent": 150.29,
+      "memory_mb": 231.59,
+      "memory_percent": 11.31,
+      "memory_limit_mb": 2048.0,
+      "net_rx_bytes": 1466253076,
+      "net_tx_bytes": 1253800450
+    },
+    {
+      "timestamp": "2026-02-27T00:35:26.812550+00:00",
+      "cpu_percent": 148.25,
+      "memory_mb": 231.36,
+      "memory_percent": 11.3,
+      "memory_limit_mb": 2048.0,
+      "net_rx_bytes": 1479267892,
+      "net_tx_bytes": 1264920747
+    },
+    {
+      "timestamp": "2026-02-27T00:35:28.816347+00:00",
+      "cpu_percent": 165.8,
+      "memory_mb": 231.91,
+      "memory_percent": 11.32,
+      "memory_limit_mb": 2048.0,
+      "net_rx_bytes": 1492719583,
+      "net_tx_bytes": 1276428513
+    },
+    {
+      "timestamp": "2026-02-27T00:35:30.819665+00:00",
+      "cpu_percent": 145.98,
+      "memory_mb": 231.55,
+      "memory_percent": 11.31,
+      "memory_limit_mb": 2048.0,
+      "net_rx_bytes": 1505732355,
+      "net_tx_bytes": 1287522606
+    },
+    {
+      "timestamp": "2026-02-27T00:35:32.823768+00:00",
+      "cpu_percent": 156.0,
+      "memory_mb": 231.37,
+      "memory_percent": 11.3,
+      "memory_limit_mb": 2048.0,
+      "net_rx_bytes": 1519239301,
+      "net_tx_bytes": 1299090466
+    },
+    {
+      "timestamp": "2026-02-27T00:35:34.827978+00:00",
+      "cpu_percent": 150.05,
+      "memory_mb": 231.88,
+      "memory_percent": 11.32,
+      "memory_limit_mb": 2048.0,
+      "net_rx_bytes": 1532056201,
+      "net_tx_bytes": 1310031139
+    },
+    {
+      "timestamp": "2026-02-27T00:35:36.832573+00:00",
+      "cpu_percent": 154.2,
+      "memory_mb": 232.02,
+      "memory_percent": 11.33,
+      "memory_limit_mb": 2048.0,
+      "net_rx_bytes": 1545202778,
+      "net_tx_bytes": 1321292602
+    },
+    {
+      "timestamp": "2026-02-27T00:35:38.836380+00:00",
+      "cpu_percent": 150.07,
+      "memory_mb": 231.7,
+      "memory_percent": 11.31,
+      "memory_limit_mb": 2048.0,
+      "net_rx_bytes": 1558419842,
+      "net_tx_bytes": 1332590393
+    },
+    {
+      "timestamp": "2026-02-27T00:35:40.841452+00:00",
+      "cpu_percent": 150.21,
+      "memory_mb": 231.89,
+      "memory_percent": 11.32,
+      "memory_limit_mb": 2048.0,
+      "net_rx_bytes": 1571402350,
+      "net_tx_bytes": 1343700586
+    },
+    {
+      "timestamp": "2026-02-27T00:35:42.844557+00:00",
+      "cpu_percent": 151.52,
+      "memory_mb": 232.28,
+      "memory_percent": 11.34,
+      "memory_limit_mb": 2048.0,
+      "net_rx_bytes": 1584626965,
+      "net_tx_bytes": 1355013786
+    },
+    {
+      "timestamp": "2026-02-27T00:35:44.847926+00:00",
+      "cpu_percent": 147.85,
+      "memory_mb": 231.22,
+      "memory_percent": 11.29,
+      "memory_limit_mb": 2048.0,
+      "net_rx_bytes": 1597864731,
+      "net_tx_bytes": 1366313750
+    },
+    {
+      "timestamp": "2026-02-27T00:35:46.851130+00:00",
+      "cpu_percent": 147.6,
+      "memory_mb": 231.62,
+      "memory_percent": 11.31,
+      "memory_limit_mb": 2048.0,
+      "net_rx_bytes": 1610695011,
+      "net_tx_bytes": 1377304105
+    },
+    {
+      "timestamp": "2026-02-27T00:35:48.855316+00:00",
+      "cpu_percent": 140.34,
+      "memory_mb": 231.61,
+      "memory_percent": 11.31,
+      "memory_limit_mb": 2048.0,
+      "net_rx_bytes": 1623798691,
+      "net_tx_bytes": 1388461496
+    },
+    {
+      "timestamp": "2026-02-27T00:35:50.860012+00:00",
+      "cpu_percent": 144.35,
+      "memory_mb": 232.16,
+      "memory_percent": 11.34,
+      "memory_limit_mb": 2048.0,
+      "net_rx_bytes": 1636712116,
+      "net_tx_bytes": 1399515115
+    },
+    {
+      "timestamp": "2026-02-27T00:35:52.863653+00:00",
+      "cpu_percent": 154.03,
+      "memory_mb": 231.36,
+      "memory_percent": 11.3,
+      "memory_limit_mb": 2048.0,
+      "net_rx_bytes": 1649792238,
+      "net_tx_bytes": 1410711136
+    },
+    {
+      "timestamp": "2026-02-27T00:35:54.867243+00:00",
+      "cpu_percent": 146.44,
+      "memory_mb": 231.73,
+      "memory_percent": 11.32,
+      "memory_limit_mb": 2048.0,
+      "net_rx_bytes": 1662954707,
+      "net_tx_bytes": 1421997744
+    },
+    {
+      "timestamp": "2026-02-27T00:35:56.871218+00:00",
+      "cpu_percent": 147.19,
+      "memory_mb": 231.55,
+      "memory_percent": 11.31,
+      "memory_limit_mb": 2048.0,
+      "net_rx_bytes": 1676136053,
+      "net_tx_bytes": 1433225428
+    },
+    {
+      "timestamp": "2026-02-27T00:35:58.875141+00:00",
+      "cpu_percent": 139.92,
+      "memory_mb": 231.75,
+      "memory_percent": 11.32,
+      "memory_limit_mb": 2048.0,
+      "net_rx_bytes": 1688668734,
+      "net_tx_bytes": 1443994771
+    },
+    {
+      "timestamp": "2026-02-27T00:36:00.879057+00:00",
+      "cpu_percent": 150.23,
+      "memory_mb": 232.05,
+      "memory_percent": 11.33,
+      "memory_limit_mb": 2048.0,
+      "net_rx_bytes": 1701996784,
+      "net_tx_bytes": 1455368636
+    },
+    {
+      "timestamp": "2026-02-27T00:36:02.882985+00:00",
+      "cpu_percent": 154.85,
+      "memory_mb": 232.3,
+      "memory_percent": 11.34,
+      "memory_limit_mb": 2048.0,
+      "net_rx_bytes": 1715480015,
+      "net_tx_bytes": 1466890589
+    },
+    {
+      "timestamp": "2026-02-27T00:36:04.886554+00:00",
+      "cpu_percent": 157.16,
+      "memory_mb": 232.16,
+      "memory_percent": 11.34,
+      "memory_limit_mb": 2048.0,
+      "net_rx_bytes": 1728593939,
+      "net_tx_bytes": 1478128903
+    },
+    {
+      "timestamp": "2026-02-27T00:36:06.890377+00:00",
+      "cpu_percent": 154.73,
+      "memory_mb": 232.3,
+      "memory_percent": 11.34,
+      "memory_limit_mb": 2048.0,
+      "net_rx_bytes": 1741746081,
+      "net_tx_bytes": 1489375166
+    },
+    {
+      "timestamp": "2026-02-27T00:36:08.893799+00:00",
+      "cpu_percent": 146.14,
+      "memory_mb": 231.95,
+      "memory_percent": 11.33,
+      "memory_limit_mb": 2048.0,
+      "net_rx_bytes": 1754512253,
+      "net_tx_bytes": 1500283212
+    },
+    {
+      "timestamp": "2026-02-27T00:36:10.897675+00:00",
+      "cpu_percent": 151.51,
+      "memory_mb": 231.91,
+      "memory_percent": 11.32,
+      "memory_limit_mb": 2048.0,
+      "net_rx_bytes": 1767348989,
+      "net_tx_bytes": 1511263045
+    },
+    {
+      "timestamp": "2026-02-27T00:36:12.901378+00:00",
+      "cpu_percent": 153.16,
+      "memory_mb": 231.69,
+      "memory_percent": 11.31,
+      "memory_limit_mb": 2048.0,
+      "net_rx_bytes": 1780530935,
+      "net_tx_bytes": 1522530975
+    },
+    {
+      "timestamp": "2026-02-27T00:36:14.904680+00:00",
+      "cpu_percent": 150.57,
+      "memory_mb": 232.18,
+      "memory_percent": 11.34,
+      "memory_limit_mb": 2048.0,
+      "net_rx_bytes": 1793608627,
+      "net_tx_bytes": 1533709318
+    },
+    {
+      "timestamp": "2026-02-27T00:36:16.907993+00:00",
+      "cpu_percent": 147.53,
+      "memory_mb": 232.04,
+      "memory_percent": 11.33,
+      "memory_limit_mb": 2048.0,
+      "net_rx_bytes": 1806618900,
+      "net_tx_bytes": 1544825300
+    },
+    {
+      "timestamp": "2026-02-27T00:36:18.913072+00:00",
+      "cpu_percent": 142.33,
+      "memory_mb": 231.88,
+      "memory_percent": 11.32,
+      "memory_limit_mb": 2048.0,
+      "net_rx_bytes": 1819415399,
+      "net_tx_bytes": 1555773512
+    },
+    {
+      "timestamp": "2026-02-27T00:36:20.916010+00:00",
+      "cpu_percent": 150.06,
+      "memory_mb": 232.1,
+      "memory_percent": 11.33,
+      "memory_limit_mb": 2048.0,
+      "net_rx_bytes": 1832508994,
+      "net_tx_bytes": 1566966458
+    },
+    {
+      "timestamp": "2026-02-27T00:36:22.919607+00:00",
+      "cpu_percent": 146.58,
+      "memory_mb": 231.43,
+      "memory_percent": 11.3,
+      "memory_limit_mb": 2048.0,
+      "net_rx_bytes": 1845422321,
+      "net_tx_bytes": 1578010572
+    },
+    {
+      "timestamp": "2026-02-27T00:36:24.923185+00:00",
+      "cpu_percent": 139.58,
+      "memory_mb": 231.54,
+      "memory_percent": 11.31,
+      "memory_limit_mb": 2048.0,
+      "net_rx_bytes": 1858095790,
+      "net_tx_bytes": 1588853159
+    },
+    {
+      "timestamp": "2026-02-27T00:36:26.927754+00:00",
+      "cpu_percent": 149.28,
+      "memory_mb": 232.29,
+      "memory_percent": 11.34,
+      "memory_limit_mb": 2048.0,
+      "net_rx_bytes": 1871195382,
+      "net_tx_bytes": 1600047622
+    },
+    {
+      "timestamp": "2026-02-27T00:36:28.931159+00:00",
+      "cpu_percent": 148.24,
+      "memory_mb": 232.03,
+      "memory_percent": 11.33,
+      "memory_limit_mb": 2048.0,
+      "net_rx_bytes": 1884399328,
+      "net_tx_bytes": 1611315169
+    },
+    {
+      "timestamp": "2026-02-27T00:36:30.934108+00:00",
+      "cpu_percent": 149.93,
+      "memory_mb": 231.88,
+      "memory_percent": 11.32,
+      "memory_limit_mb": 2048.0,
+      "net_rx_bytes": 1897393538,
+      "net_tx_bytes": 1622419314
+    },
+    {
+      "timestamp": "2026-02-27T00:36:32.937617+00:00",
+      "cpu_percent": 143.5,
+      "memory_mb": 232.54,
+      "memory_percent": 11.35,
+      "memory_limit_mb": 2048.0,
+      "net_rx_bytes": 1910285733,
+      "net_tx_bytes": 1633448441
+    },
+    {
+      "timestamp": "2026-02-27T00:36:34.941178+00:00",
+      "cpu_percent": 145.77,
+      "memory_mb": 232.78,
+      "memory_percent": 11.37,
+      "memory_limit_mb": 2048.0,
+      "net_rx_bytes": 1923280034,
+      "net_tx_bytes": 1644595221
+    },
+    {
+      "timestamp": "2026-02-27T00:36:36.945081+00:00",
+      "cpu_percent": 147.41,
+      "memory_mb": 232.09,
+      "memory_percent": 11.33,
+      "memory_limit_mb": 2048.0,
+      "net_rx_bytes": 1936415083,
+      "net_tx_bytes": 1655818793
+    },
+    {
+      "timestamp": "2026-02-27T00:36:38.948254+00:00",
+      "cpu_percent": 146.38,
+      "memory_mb": 231.43,
+      "memory_percent": 11.3,
+      "memory_limit_mb": 2048.0,
+      "net_rx_bytes": 1949208157,
+      "net_tx_bytes": 1666742842
+    },
+    {
+      "timestamp": "2026-02-27T00:36:40.951336+00:00",
+      "cpu_percent": 162.55,
+      "memory_mb": 232.18,
+      "memory_percent": 11.34,
+      "memory_limit_mb": 2048.0,
+      "net_rx_bytes": 1962788028,
+      "net_tx_bytes": 1678353210
+    },
+    {
+      "timestamp": "2026-02-27T00:36:42.955873+00:00",
+      "cpu_percent": 149.42,
+      "memory_mb": 231.98,
+      "memory_percent": 11.33,
+      "memory_limit_mb": 2048.0,
+      "net_rx_bytes": 1975814832,
+      "net_tx_bytes": 1689470278
+    },
+    {
+      "timestamp": "2026-02-27T00:36:44.960188+00:00",
+      "cpu_percent": 156.35,
+      "memory_mb": 232.61,
+      "memory_percent": 11.36,
+      "memory_limit_mb": 2048.0,
+      "net_rx_bytes": 1989129617,
+      "net_tx_bytes": 1700851016
+    },
+    {
+      "timestamp": "2026-02-27T00:36:46.963522+00:00",
+      "cpu_percent": 153.48,
+      "memory_mb": 232.32,
+      "memory_percent": 11.34,
+      "memory_limit_mb": 2048.0,
+      "net_rx_bytes": 2002134053,
+      "net_tx_bytes": 1711989778
+    },
+    {
+      "timestamp": "2026-02-27T00:36:48.966997+00:00",
+      "cpu_percent": 141.73,
+      "memory_mb": 232.37,
+      "memory_percent": 11.35,
+      "memory_limit_mb": 2048.0,
+      "net_rx_bytes": 2014724266,
+      "net_tx_bytes": 1722766485
+    },
+    {
+      "timestamp": "2026-02-27T00:36:50.971288+00:00",
+      "cpu_percent": 127.16,
+      "memory_mb": 233.06,
+      "memory_percent": 11.38,
+      "memory_limit_mb": 2048.0,
+      "net_rx_bytes": 2027081316,
+      "net_tx_bytes": 1733342470
+    },
+    {
+      "timestamp": "2026-02-27T00:36:52.974731+00:00",
+      "cpu_percent": 81.81,
+      "memory_mb": 231.82,
+      "memory_percent": 11.32,
+      "memory_limit_mb": 2048.0,
+      "net_rx_bytes": 2036500706,
+      "net_tx_bytes": 1741400202
+    },
+    {
+      "timestamp": "2026-02-27T00:36:54.979585+00:00",
+      "cpu_percent": 52.64,
+      "memory_mb": 232.63,
+      "memory_percent": 11.36,
+      "memory_limit_mb": 2048.0,
+      "net_rx_bytes": 2042500376,
+      "net_tx_bytes": 1746542944
+    },
+    {
+      "timestamp": "2026-02-27T00:36:56.982306+00:00",
+      "cpu_percent": 25.72,
+      "memory_mb": 232.76,
+      "memory_percent": 11.37,
+      "memory_limit_mb": 2048.0,
+      "net_rx_bytes": 2044988832,
+      "net_tx_bytes": 1748707298
+    },
+    {
+      "timestamp": "2026-02-27T00:36:58.987714+00:00",
+      "cpu_percent": 2.08,
+      "memory_mb": 231.76,
+      "memory_percent": 11.32,
+      "memory_limit_mb": 2048.0,
+      "net_rx_bytes": 2045154276,
+      "net_tx_bytes": 1748849284
+    }
+  ],
+  "summary": {
+    "cpu": {
+      "avg": 149.62,
+      "max": 207.18,
+      "min": 0.37
+    },
+    "memory_mb": {
+      "avg": 233.51,
+      "max": 260.1,
+      "min": 187.77
+    }
+  }
+}

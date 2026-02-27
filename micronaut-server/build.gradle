@@ -1,0 +1,47 @@
+plugins {
+    id 'io.micronaut.application' version '4.6.2'
+}
+
+version = '1.0.0'
+group = 'com.benchmark.mcp'
+
+micronaut {
+    version = '4.10.8'
+    processing {
+        incremental(true)
+        annotations('com.benchmark.mcp.*')
+    }
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    annotationProcessor("io.micronaut:micronaut-http-validation")
+    annotationProcessor("io.micronaut:micronaut-inject-java")
+    annotationProcessor("io.micronaut.serde:micronaut-serde-processor")
+    annotationProcessor("io.micronaut.jsonschema:micronaut-json-schema-processor")
+    annotationProcessor("io.micronaut.validation:micronaut-validation-processor")
+
+    implementation("io.micronaut.mcp:micronaut-mcp-server-java-sdk:0.0.19")
+    implementation("io.micronaut.jsonschema:micronaut-json-schema-annotations")
+    implementation("io.micronaut:micronaut-management")
+    implementation("io.micronaut.serde:micronaut-serde-jackson")
+    implementation("io.micronaut.validation:micronaut-validation")
+    implementation("io.micronaut:micronaut-http-server-netty")
+    implementation("io.micronaut:micronaut-http-client")
+    implementation("io.micronaut.redis:micronaut-redis-lettuce")
+    implementation("com.fasterxml.jackson.core:jackson-databind")
+
+    runtimeOnly("ch.qos.logback:logback-classic")
+}
+
+java {
+    sourceCompatibility = JavaVersion.VERSION_21
+    targetCompatibility = JavaVersion.VERSION_21
+}
+
+application {
+    mainClass.set('com.benchmark.mcp.Application')
+}
