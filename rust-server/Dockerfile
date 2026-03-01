@@ -1,9 +1,6 @@
 FROM rust:slim AS builder
 WORKDIR /app
 
-# Copy the patched SDK first — required by [patch.crates-io] in Cargo.toml
-COPY rmcp-patched/ rmcp-patched/
-
 # Cache dependencies: copy manifests and build with a dummy main
 COPY Cargo.toml .
 RUN mkdir src && echo 'fn main() {}' > src/main.rs

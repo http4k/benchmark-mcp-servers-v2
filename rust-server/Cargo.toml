@@ -4,7 +4,7 @@ version = "0.1.0"
 edition = "2024"
 
 [dependencies]
-rmcp = { version = "0.16", features = [
+rmcp = { version = "0.17", features = [
     "server",
     "macros",
     "transport-streamable-http-server",
@@ -22,6 +22,3 @@ tracing-subscriber = { version = "0.3", features = ["env-filter"] }
 reqwest = { version = "0.12", default-features = false, features = ["json", "rustls-tls"] }
 redis = { version = "0.27", features = ["tokio-comp"] }
 deadpool-redis = { version = "0.18", features = ["rt_tokio_1"] }
-
-[patch.crates-io]
-rmcp = { path = "rmcp-patched/crates/rmcp" }

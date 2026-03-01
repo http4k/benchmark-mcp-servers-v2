@@ -127,12 +127,6 @@ k6 run -e SERVER_URL=http://localhost:8095/mcp benchmark/benchmark.js
 | micronaut | 8091 |
 | micronaut-native | 8092 |
 
-## Benchmark Rounds
-
-Results from the three v2 runs (February 27–28, 2026) are in `bench-round-2.md`. Earlier exploration rounds are in `bench-round-0.md` and `bench-round-1.md`.
-
-An isolated run of the Rust server without the `json_response` SDK patch is available in `benchmark/results/20260301_151912/` for reference.
-
 ## Adding a New Server
 
 See [ADDING_SERVERS.md](ADDING_SERVERS.md) for instructions on integrating a new implementation into the benchmark suite.
