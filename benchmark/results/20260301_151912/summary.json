@@ -1,0 +1,142 @@
+{
+  "timestamp": "2026-03-01T15:25:00.632290+00:00",
+  "results_dir": "/home/poc01/benchmark-mcp-servers-v2/benchmark/results/20260301_151912",
+  "config": {
+    "vus": 50,
+    "duration": "5m",
+    "warmup_seconds": 60,
+    "cpu_limit": "2.0",
+    "memory_limit": "2G"
+  },
+  "infra": {
+    "redis": {
+      "image": "redis:7-alpine",
+      "cpus": "0.5",
+      "memory": "512M",
+      "persistence": "disabled (--save \"\" --appendonly no)"
+    },
+    "api_service": {
+      "language": "Go (stdlib only)",
+      "cpus": "2.0",
+      "memory": "2G",
+      "catalog": "100k in-memory products",
+      "endpoints": [
+        "/products/search",
+        "/products/{id}",
+        "/cart/calculate"
+      ]
+    },
+    "notes": {
+      "nodejs_workers": "nodejs and bun run WEB_CONCURRENCY=4 (cluster mode). Node.js is single-threaded by design; clustering is the standard production setup to utilize multiple CPU cores.",
+      "io_parallelism": "All servers parallelize independent I/O within each tool handler (HTTP + Redis concurrent). Redis checkout uses pipeline (1 RTT) where supported.",
+      "user_distribution": "k6 VUs 1-50 use user-00001 to user-00050 (VU % 1000), distributing Redis key load across 50 distinct users.",
+      "redis_reset": "Redis is flushed and re-seeded before each server test to ensure a consistent baseline state."
+    }
+  },
+  "servers": {
+    "rust": {
+      "http": {
+        "total_requests": 417328,
+        "failed_requests": 0,
+        "rps": 1283.4569839333858,
+        "latency": {
+          "avg": 27.59467611509067,
+          "min": 0.619244,
+          "max": 44.933424,
+          "p50": 27.382492333333328,
+          "p90": 28.247103466666672,
+          "p95": 28.628363866666668,
+          "p99": 29.663205346666672
+        },
+        "raw_http_reqs": 625992,
+        "raw_rps": 1925.1854759000787
+      },
+      "mcp": {
+        "total_mcp_requests": 417328,
+        "mcp_errors": 0,
+        "error_rate": 0
+      },
+      "tools": {
+        "search_products": {
+          "avg": 1.1084429409297345,
+          "min": 0.619244,
+          "max": 44.933424,
+          "p50": 0.868723,
+          "p90": 1.5497964000000017,
+          "p95": 2.566567599999998,
+          "p99": 4.400141840000003,
+          "count": 43389
+        },
+        "get_user_cart": {
+          "avg": 40.836840827583394,
+          "min": 40.238248,
+          "max": 44.613509,
+          "p50": 40.642369,
+          "p90": 41.5985278,
+          "p95": 41.6624252,
+          "p99": 42.27535280000001,
+          "count": 43389
+        },
+        "checkout": {
+          "avg": 40.83874457675889,
+          "min": 1.991286,
+          "max": 44.449748,
+          "p50": 40.636385,
+          "p90": 41.592986200000006,
+          "p95": 41.6560988,
+          "p99": 42.3141214,
+          "count": 43389
+        },
+        "_initialize": {
+          "avg": 27.398597110035727,
+          "min": 0.184075,
+          "max": 44.422359,
+          "p50": 40.723431,
+          "p90": 41.657569,
+          "p95": 41.8118129,
+          "p99": 42.20106772,
+          "count": 130167
+        },
+        "_tools_list": {
+          "avg": 40.79460249763764,
+          "min": 0.238328,
+          "max": 44.276993,
+          "p50": 40.639193,
+          "p90": 41.5954866,
+          "p95": 41.6585746,
+          "p99": 42.25818300000001,
+          "count": 43389
+        }
+      },
+      "resources": {
+        "cpu": {
+          "avg": 45.69,
+          "max": 52.34,
+          "min": 0.0
+        },
+        "memory_mb": {
+          "avg": 5.55,
+          "max": 6.3,
+          "min": 2.33
+        }
+      }
+    }
+  },
+  "rankings": {
+    "latency_avg": [
+      "rust"
+    ],
+    "latency_p95": [
+      "rust"
+    ],
+    "rps": [
+      "rust"
+    ],
+    "cpu_efficiency": [
+      "rust"
+    ],
+    "memory_efficiency": [
+      "rust"
+    ]
+  }
+}
