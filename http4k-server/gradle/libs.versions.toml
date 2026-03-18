@@ -1,0 +1,23 @@
+[versions]
+http4k = "6.35.0.0"
+kotlin = "2.3.10"
+kotshi = "4.0.0"
+ksp = "2.3.0"
+shadow = "9.4.0"
+lettuce = "6.5.5.RELEASE"
+
+[libraries]
+http4k-bom = { module = "org.http4k:http4k-bom", version.ref = "http4k" }
+http4k-core = { module = "org.http4k:http4k-core" }
+http4k-config = { module = "org.http4k:http4k-config" }
+http4k-mcp-sdk = { module = "org.http4k.pro:http4k-ai-mcp-sdk" }
+http4k-server-netty = { module = "org.http4k:http4k-server-netty" }
+http4k-format-moshi = { module = "org.http4k:http4k-format-moshi" }
+kotshi-api = { module = "se.ansman.kotshi:api", version.ref = "kotshi" }
+kotshi-compiler = { module = "se.ansman.kotshi:compiler", version.ref = "kotshi" }
+lettuce = { module = "io.lettuce:lettuce-core", version.ref = "lettuce" }
+
+[plugins]
+kotlin-jvm = { id = "org.jetbrains.kotlin.jvm", version.ref = "kotlin" }
+ksp = { id = "com.google.devtools.ksp", version.ref = "ksp" }
+shadow = { id = "com.gradleup.shadow", version.ref = "shadow" }

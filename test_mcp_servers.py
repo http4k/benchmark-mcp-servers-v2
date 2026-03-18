@@ -29,6 +29,7 @@ SERVERS = {
     "bun":            "http://localhost:8094/mcp",
     "rust":           "http://localhost:8095/mcp",
     "rust-axum":      "http://localhost:8096/mcp",
+    "http4k":         "http://localhost:8097/mcp",
 }
 
 
