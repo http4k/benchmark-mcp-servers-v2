@@ -1,0 +1,29 @@
+[versions]
+http4k = "6.46.0.0"
+kotlin = "2.3.21"
+kotshi = "4.0.0"
+ksp = "2.3.7"
+shadow = "9.4.0"
+graalvm-native = "0.10.4"
+lettuce = "6.5.5.RELEASE"
+version-catalog-update = "1.1.0"
+versions = "0.54.0"
+
+[libraries]
+http4k-bom = { module = "org.http4k:http4k-bom", version.ref = "http4k" }
+http4k-core = { module = "org.http4k:http4k-core" }
+http4k-config = { module = "org.http4k:http4k-config" }
+http4k-mcp-sdk = { module = "org.http4k.pro:http4k-ai-mcp-sdk" }
+http4k-server-undertow = { module = "org.http4k:http4k-server-undertow" }
+http4k-format-moshi = { module = "org.http4k:http4k-format-moshi" }
+kotshi-api = { module = "se.ansman.kotshi:api", version.ref = "kotshi" }
+kotshi-compiler = { module = "se.ansman.kotshi:compiler", version.ref = "kotshi" }
+lettuce = { module = "io.lettuce:lettuce-core", version.ref = "lettuce" }
+
+[plugins]
+kotlin-jvm = { id = "org.jetbrains.kotlin.jvm", version.ref = "kotlin" }
+ksp = { id = "com.google.devtools.ksp", version.ref = "ksp" }
+shadow = { id = "com.gradleup.shadow", version.ref = "shadow" }
+graalvm-native = { id = "org.graalvm.buildtools.native", version.ref = "graalvm-native" }
+version-catalog-update = { id = "nl.littlerobots.version-catalog-update", version.ref = "version-catalog-update" }
+versions = { id = "com.github.ben-manes.versions", version.ref = "versions" }
