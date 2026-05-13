@@ -22,6 +22,8 @@ declare -A SERVERS=(
     [micronaut-native]="mcp-micronaut-native-server:8092"
     [bun]="mcp-bun-server:8094"
     [rust]="mcp-rust-server:8095"
+    [http4k]="mcp-bun-server:8097"
+    [http4k-native]="mcp-rust-server:8098"
 )
 
 # Colors

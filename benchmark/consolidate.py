@@ -15,7 +15,9 @@ CANONICAL_ORDER = ['python', 'go',
                    'quarkus', 'quarkus-native',
                    'java-vt', 'java-vt-native',
                    'java-webflux', 'java-webflux-native',
-                   'micronaut', 'micronaut-native']
+                   'micronaut', 'micronaut-native',
+                   'http4k', 'http4k-native'
+                   ]
 
 
 def get_servers(results_dir):
