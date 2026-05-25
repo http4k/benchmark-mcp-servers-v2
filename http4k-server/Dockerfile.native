@@ -4,7 +4,7 @@ WORKDIR /app
 
 # Install gradle
 RUN microdnf install findutils wget unzip \
-    && wget -q https://services.gradle.org/distributions/gradle-9.3.1-bin.zip \
+    && wget -q https://services.gradle.org/distributions/gradle-9.5.1-bin.zip \
     && unzip -q gradle-9.3.1-bin.zip \
     && rm gradle-9.3.1-bin.zip
 
