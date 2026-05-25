@@ -1,5 +1,5 @@
 [versions]
-http4k = "6.46.0.0"
+http4k = "6.47.2.0"
 kotlin = "2.3.21"
 kotshi = "4.0.0"
 ksp = "2.3.7"

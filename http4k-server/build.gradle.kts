@@ -3,6 +3,8 @@ plugins {
     alias(libs.plugins.ksp)
     alias(libs.plugins.shadow)
     alias(libs.plugins.graalvm.native)
+    alias(libs.plugins.version.catalog.update)
+    alias(libs.plugins.versions)
     application
 }
 
